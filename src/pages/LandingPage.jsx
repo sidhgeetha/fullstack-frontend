@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import { Outlet } from "react-router-dom";
 
 const LandingPage = () => {
   return (
-    <div>LandingPage</div>
-  )
-}
+    <div>
+      <h1>Job Portal</h1>
+      <p>Welcome to job portal!</p>
+      <p>Register and login to apply jobs here!</p>
 
-export default LandingPage
+      <Outlet />
+    </div>
+  );
+};
+
+export default LandingPage;

@@ -1,9 +1,25 @@
-import React from 'react'
+import React from "react";
+import { useRouteError } from "react-router-dom";
 
 const Error = () => {
-  return (
-    <div>Error</div>
-  )
-}
+  const error = useRouteError();
 
-export default Error
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center", // Corrected typo
+        height: "100vh",
+      }}
+    >
+      <h1>Error</h1>
+      {/* <p>{error.message}</p> */}
+
+      <a href="">Go to home </a>
+    </div>
+  );
+};
+
+export default Error;
